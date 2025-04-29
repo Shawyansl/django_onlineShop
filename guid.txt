@@ -1,0 +1,16 @@
+1:
+conda create -n online_shop python=3.12
+conda activate online_shop
+pip install Django
+django-admin startproject online_shop .
+python manage.py startapp nameapp
+
+in setting.py -->> installed app :
+
+    "django.apps.AccountsConfig",
+    "django.apps.OrdersConfig",
+    "django.apps.ProductsConfig",
+
+avvalesh ba horoof bozorg shoroo mishe
+
+
