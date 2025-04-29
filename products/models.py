@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class Category(models.Model):
     title = models.CharField(max_length=100)
     parent = models.ForeignKey('self', on_delete=models.CASCADE , related_name="children")
@@ -24,7 +23,7 @@ class Review(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE , related_name="reviews")
     body = models.TextField(default="")
     rate = models.SmallIntegerField(default=1)
-    #to do : user
+    user = models.ForeignKey("accounts.User" , on_delete=models.CASCADE , related_name="users")
 
 class ProductDetail(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE , related_name="details")

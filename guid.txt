@@ -14,3 +14,14 @@ in setting.py -->> installed app :
 avvalesh ba horoof bozorg shoroo mishe
 
 
+
+3:
+in accounts/models.py
+from django.contrib.auth.models import AbstractUser
+
+class User(AbstractUser):
+    pass
+
+in setting.py : AUTH_USER_MODEL = "accounts.User"
+
+4:
